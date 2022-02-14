@@ -1,0 +1,95 @@
+.main-box {
+  width:100%;
+  margin-top: 20rpx;
+}
+
+.balance-box {
+  width: 100%;
+  padding: 40rpx 0;
+  border-top: 1rpx solid #f3f3f3;
+  border-bottom: 1rpx solid #f3f3f3;
+  background: #7f7fd5;
+}
+
+.balance-text {
+  width: 100%;
+  text-align: center;
+  color: #ddd;
+}
+
+.balance {
+  width: 100%;
+  text-align: center;
+  font-size: 80rpx;
+  font-weight: bold;
+  margin-top: 40rpx;
+  color: #fff;
+}
+
+.balance-can-use {
+  width: 100%;
+  text-align: center;
+  margin-top: 40rpx;
+  color: #ddd;
+}
+
+.detail-box {
+  width: 100%;
+  padding: 0 30rpx 20rpx;
+  border-bottom: 1rpx solid #f3f3f3;
+}
+
+.detail-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.boy-detail, .girl-detail {
+  width: 50%;
+  padding: 20rpx;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.boy-icon, .girl-icon {
+  width: 80rpx;
+  height: 80rpx;
+  border: 1rpx solid #999999;
+  border-radius: 40rpx;
+  margin: 0 auto;
+}
+
+.boy-transfer-in, .girl-transfer-in {
+  margin-top: 20rpx;
+  color: #999999;
+}
+
+.boy-transfer-out, .girl-transfer-out {
+  margin-top: 20rpx;
+  color: #999999;
+}
+
+.bottom-button {
+  width:100%;
+  display: flex;
+  position: fixed;
+  bottom: 0;
+}
+
+.inline-button {
+  width: 100%;
+}
+
+.transfer-out-button {
+  color: #7f7fd5 !important;
+  border: 2rpx solid #7f7fd5 !important;
+}
+
+.bold {
+  color: #808080;
+  font-weight: bold;
+}

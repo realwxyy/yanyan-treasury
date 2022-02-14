@@ -1,2 +1,0 @@
-# yanyan-treasury
-YanYan Treasury

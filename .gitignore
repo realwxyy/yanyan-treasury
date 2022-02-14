@@ -1,0 +1,32 @@
+LOG_PATH_IS_UNDEFINED/
+logs/
+api/logs/
+/target/
+!.mvn/wrapper/maven-wrapper.jar
+mvnw
+mvnw.cmd
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+
+### NetBeans ###
+/nbproject/private/
+/build/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+/miniprogram_npm/
+/node_modules/

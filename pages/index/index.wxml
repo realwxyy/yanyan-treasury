@@ -1,0 +1,37 @@
+<custom-nav-bar />
+<!-- <l-button bind:tap="handleTest">点击测试</l-button>
+<view class="connect-info">云服务器连接信息: {{ connectInfo }}</view>
+<view class="open-id">openId: {{ openId }}</view> -->
+<view class="main-box">
+  <view class="balance-box">
+    <view class="ad"></view>
+    <view class="balance-text">共攒余额</view>
+    <view class="balance">0.00</view>
+    <view class="balance-can-use">可转出余额 ¥0.00</view>
+  </view>
+  <view class="detail-box">
+    <view class="detail-text">
+      <l-list title="明细" right-desc="攒钱日历" />
+    </view>
+    <view class="detail-info">
+      <view class="boy-detail">
+        <view class="boy-icon"></view>
+        <view class="boy-transfer-in">转入<text class="bold">0.00</text>元</view>
+        <view class="boy-transfer-out">转出<text class="bold">0.00</text>元</view>
+      </view>
+      <view class="girl-detail">
+        <view class="girl-icon"></view>
+        <view class="girl-transfer-in">转入<text class="bold">0.00</text>元</view>
+        <view class="girl-transfer-out">转出<text class="bold">0.00</text>元</view>
+      </view>
+    </view>
+  </view>
+  <view class="bottom-button">
+    <view class="inline-button transfer-out">
+      <l-button size="long" plain l-class="transfer-out-button" bind:tap="handleTest">转出</l-button>
+    </view>
+    <view class="inline-button transfer-in">
+      <l-button bg-color="#7f7fd5" size="long" bind:tap="handleTest">转入</l-button>
+    </view>
+  </view>
+</view>

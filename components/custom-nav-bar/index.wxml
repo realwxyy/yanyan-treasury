@@ -1,0 +1,3 @@
+<view class="custom-class">
+  <l-capsule-bar has-padding home-page="/pages/index/index" title="嫣嫣小金库" />
+</view>
