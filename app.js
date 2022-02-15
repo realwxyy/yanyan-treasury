@@ -1,9 +1,13 @@
-// app.js
+import { deviceInit } from './util/device'
+
 const globalData = {}
 const methodMap = {
   onLaunch() {
     this.cloudInit()
     this.getOpenId()
+  },
+  onShow() {
+    deviceInit()
   }
 }
 const customMap = {

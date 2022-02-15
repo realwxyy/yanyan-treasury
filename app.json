@@ -9,6 +9,10 @@
         "navigationBarTextStyle": "black",
         "navigationStyle": "custom"
     },
+    "usingComponents": {
+        "l-toast": "lin-ui/toast/index",
+        "l-dialog": "lin-ui/dialog/index"
+    },
     "style": "v2",
     "sitemapLocation": "sitemap.json",
     "lazyCodeLoading": "requiredComponents"

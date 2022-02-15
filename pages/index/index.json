@@ -3,6 +3,7 @@
   "usingComponents": {
     "l-button": "lin-ui/button/index",
     "l-list": "lin-ui/list/index",
+    "l-album": "lin-ui/album/index",
     "custom-nav-bar": "/components/custom-nav-bar/index"
   }
 }

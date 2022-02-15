@@ -5,33 +5,34 @@
 <view class="main-box">
   <view class="balance-box">
     <view class="ad"></view>
-    <view class="balance-text">共攒余额</view>
-    <view class="balance">0.00</view>
-    <view class="balance-can-use">可转出余额 ¥0.00</view>
+    <view class="balance-text" bind:tap="handleBalanceVis">共攒余额<text class="iconfont icon-eye {{ balanceVis ? 'icon-eye-open' : 'icon-eye-close' }}" /></view>
+    <view class="balance-{{ balanceVis }}">{{ balanceVis ? '0.00' : '少说一个亿' }}</view>
+    <view class="balance-can-use">可转出余额 {{ balanceVis ? '¥ 0.00' : '🙈' }}</view>
   </view>
   <view class="detail-box">
     <view class="detail-text">
-      <l-list title="明细" right-desc="攒钱日历" />
+      <l-list l-right-class="detail-right-content" l-content-class="detail-left-title" title="明细" right-desc="攒钱日历" />
     </view>
     <view class="detail-info">
       <view class="boy-detail">
-        <view class="boy-icon"></view>
-        <view class="boy-transfer-in">转入<text class="bold">0.00</text>元</view>
-        <view class="boy-transfer-out">转出<text class="bold">0.00</text>元</view>
+        <view class="boy-icon"><text class="iconfont icon-boy" /></view>
+        <view class="boy-transfer-in">转入<text class="bold"> 0.00 </text>元</view>
+        <view class="boy-transfer-out">转出<text class="bold"> 0.00 </text>元</view>
       </view>
       <view class="girl-detail">
-        <view class="girl-icon"></view>
-        <view class="girl-transfer-in">转入<text class="bold">0.00</text>元</view>
-        <view class="girl-transfer-out">转出<text class="bold">0.00</text>元</view>
+        <view class="girl-icon"><text class="iconfont icon-girl" /></view>
+        <view class="girl-transfer-in">转入<text class="bold"> 0.00 </text>元</view>
+        <view class="girl-transfer-out">转出<text class="bold"> 0.00 </text>元</view>
       </view>
     </view>
   </view>
-  <view class="bottom-button">
+  <view class="bottom-button" style="bottom: {{ ix ? '68rpx' : '0' }}">
     <view class="inline-button transfer-out">
-      <l-button size="long" plain l-class="transfer-out-button" bind:tap="handleTest">转出</l-button>
+      <l-button size="long" plain l-class="transfer-out-button" bind:tap="handleTransferOut">转出</l-button>
     </view>
     <view class="inline-button transfer-in">
-      <l-button bg-color="#7f7fd5" size="long" bind:tap="handleTest">转入</l-button>
+      <l-button bg-color="#6dd5fa" size="long" bind:tap="handleTransferIn">转入</l-button>
     </view>
   </view>
 </view>
+<l-dialog id="custom-dialog" />

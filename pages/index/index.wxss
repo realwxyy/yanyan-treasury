@@ -8,19 +8,36 @@
   padding: 40rpx 0;
   border-top: 1rpx solid #f3f3f3;
   border-bottom: 1rpx solid #f3f3f3;
-  background: #7f7fd5;
+  background: #6dd5fa;
 }
 
 .balance-text {
   width: 100%;
   text-align: center;
-  color: #ddd;
+  color: #ffffee;
+  position: relative;
 }
 
-.balance {
+.icon-eye {
+  /* margin-left: 20rpx; */
+  position: absolute;
+  right: 34%;
+  top: 25%;
+}
+
+.balance-true {
   width: 100%;
   text-align: center;
-  font-size: 80rpx;
+  font-size: 70rpx;
+  font-weight: bold;
+  margin-top: 40rpx;
+  color: #fff;
+}
+
+.balance-false {
+  width: 100%;
+  text-align: center;
+  font-size: 40rpx;
   font-weight: bold;
   margin-top: 40rpx;
   color: #fff;
@@ -30,13 +47,17 @@
   width: 100%;
   text-align: center;
   margin-top: 40rpx;
-  color: #ddd;
+  color: #ffffee;
 }
 
 .detail-box {
   width: 100%;
   padding: 0 30rpx 20rpx;
   border-bottom: 1rpx solid #f3f3f3;
+}
+
+.detail-left-title, .detail-right-content{
+  color: #999999 !important;
 }
 
 .detail-info {
@@ -58,9 +79,17 @@
 .boy-icon, .girl-icon {
   width: 80rpx;
   height: 80rpx;
-  border: 1rpx solid #999999;
+  /* border: 1rpx solid #999999; */
   border-radius: 40rpx;
   margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon-boy, .icon-girl {
+  font-size: 50rpx;
+  color: #999999;
 }
 
 .boy-transfer-in, .girl-transfer-in {
@@ -77,7 +106,6 @@
   width:100%;
   display: flex;
   position: fixed;
-  bottom: 0;
 }
 
 .inline-button {
@@ -85,8 +113,8 @@
 }
 
 .transfer-out-button {
-  color: #7f7fd5 !important;
-  border: 2rpx solid #7f7fd5 !important;
+  color: #6dd5fa !important;
+  border: 2rpx solid #6dd5fa !important;
 }
 
 .bold {
