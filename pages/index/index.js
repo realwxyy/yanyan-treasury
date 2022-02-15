@@ -1,4 +1,5 @@
 import { isIphoneXSeries } from '../../util/device'
+import { getStorageSync } from '../../util/wechat'
 
 const data = {
   ix: isIphoneXSeries(),
@@ -9,7 +10,6 @@ const data = {
 }
 const methodMap = {
   onShow() {
-    console.log(this.data.ix)
   }
 }
 const customMap = {
@@ -27,7 +27,7 @@ const customMap = {
       "data": ""
     })
     const { data: connectInfo } = res
-    const openId = wx.getStorageSync('openId')
+    const openId = getStorageSync('openId')
     this.setData({ connectInfo, openId })
   },
   handleBalanceVis() {
