@@ -6,8 +6,8 @@
   <view class="balance-box">
     <view class="ad"></view>
     <view class="balance-text" bind:tap="handleBalanceVis">共攒余额<text class="iconfont icon-eye {{ balanceVis ? 'icon-eye-open' : 'icon-eye-close' }}" /></view>
-    <view class="balance-{{ balanceVis }}">{{ balanceVis ? '0.00' : '少说一个亿' }}</view>
-    <view class="balance-can-use">可转出余额 {{ balanceVis ? '¥ 0.00' : '🙈' }}</view>
+    <view class="balance-{{ balanceVis }}">{{ balanceVis ? balance.balance : '少说一个亿' }}</view>
+    <view class="balance-can-use">可转出余额 {{ balanceVis ? '¥ ' + balance.balance : '🙈' }}</view>
   </view>
   <view class="detail-box">
     <view class="detail-text">
@@ -16,15 +16,20 @@
     <view class="detail-info">
       <view class="boy-detail">
         <view class="boy-icon"><text class="iconfont icon-boy" /></view>
-        <view class="boy-transfer-in">转入<text class="bold"> 0.00 </text>元</view>
+        <view class="boy-transfer-in">转入<text class="bold"> {{ balanceEachTotal.boyIn }} </text>元</view>
         <view class="boy-transfer-out">转出<text class="bold"> 0.00 </text>元</view>
       </view>
       <view class="girl-detail">
         <view class="girl-icon"><text class="iconfont icon-girl" /></view>
-        <view class="girl-transfer-in">转入<text class="bold"> 0.00 </text>元</view>
+        <view class="girl-transfer-in">转入<text class="bold"> {{ balanceEachTotal.girlIn || 0 }} </text>元</view>
         <view class="girl-transfer-out">转出<text class="bold"> 0.00 </text>元</view>
       </view>
     </view>
+  </view>
+  <view class="transfer-history-box">
+    <block wx:for="{{ balances }}" wx:key="item.id">
+      <l-list l-right-class="detail-right-content" l-content-class="detail-left-title" is-link="{{ false }}" title="{{ item.type ? '转入' : '转出' }}" desc="{{ item.type ? '+': '-' }} {{ item.amount }}" right-desc="{{ item.balance }}" />
+    </block>
   </view>
   <view class="bottom-button" style="bottom: {{ ix ? '68rpx' : '0' }}">
     <view class="inline-button transfer-out">
@@ -35,4 +40,6 @@
     </view>
   </view>
 </view>
-<l-dialog id="custom-dialog" />
+<l-dialog id="custom-dialog" bind:linconfirm="handleDialogConfirm" />
+<l-dialog id="custom-dialog2" />
+<l-dialog id="custom-dialog3" />

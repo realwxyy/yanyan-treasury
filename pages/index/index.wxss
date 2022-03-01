@@ -1,6 +1,5 @@
 .main-box {
   width:100%;
-  margin-top: 20rpx;
 }
 
 .balance-box {
@@ -120,4 +119,8 @@
 .bold {
   color: #808080;
   font-weight: bold;
+}
+
+.transfer-history-box {
+  padding: 0 20rpx;
 }
